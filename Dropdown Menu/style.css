@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    box-sizing: border-box;
+    background-color: white;
+}
+#menu {
+    width: 35px;
+    margin: 28px;
+    display: none;
+    float: right;
+}
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+#bar1{
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+.icon .bar{
+    background-color: #fff;
+}
+.icon #bar1{
+    transform: translateY(4px) rotate(-45deg);
+}
+.icon #bar3{
+    transform: translateY(-6px) rotate(45deg);
+}
+.icon #bar2{
+    opacity: 0;
+}
+.menu-bar{
+     background-color: black;
+     text-align: center;
+}
+.menu-bar ul{
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    color: white;
+    list-style: none;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover{
+    background-color: red;
+    border-radius: 3px;
+}
+.sub-menu-1{
+    display: none;
+} 
+.menu-bar ul li:hover .sub-menu-1{
+    display:block;
+    position: absolute;
+    background-color: gray;
+    margin: 20px 0 0 44px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 100px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background-color: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    body{
+        background-color: black;
+    }
+    #menu {
+        margin: 28px;
+        display: block;
+        float: right;
+    }
+    .menu-bar ul{
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+        color: white;
+        list-style: none;
+    }
+    .menu-bar{
+        padding: 0;
+        margin: 0 20px;
+        transition: 1s ease;
+        display:none;
+        cursor: pointer;
+    }
+    .change{
+        background-color: #f55c47;
+        color: black;
+        margin: 0;
+        position: absolute;
+        font-size: 30px;
+        top: 67px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-bar ul li a{
+        text-decoration: none;
+        color:  black;
+    }
+} 
